@@ -84,7 +84,9 @@ while (running)
                 int RecipientID = rTransactions.GetInt32(2);
                 int Amount = rTransactions.GetInt32(3);
                 string Description = rTransactions.GetString(4);
-                Console.WriteLine($"{PaymentID,5}|{GiverID,5}|{RecipientID,5}|£{Amount,5}|{Description,5}");
+
+                Console.WriteLine($"{PaymentID} - {GiverID} sent {RecipientID} £{Amount} for {Description}");
+
 
             }
             // get list of money given
