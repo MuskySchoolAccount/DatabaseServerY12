@@ -29,7 +29,17 @@ CREATE TABLE Payment (
 
 INSERT INTO Payment(GiverID, RecipientID, Amount, TIMESTAMP, Description)
 	VALUES 
-	(1, 5, 100, DATE(), 'Lunch'),
+	(1, 2, 70, DATE(), 'Lunch'),
+	(1, 3, 10, DATE(), 'Fanta'),
+	(3, 1, 23, DATE(), 'Breakfast'),
+	(2, 5, 70, DATE(), 'Phone Repair'),
+	(5, 4, 64, DATE(), 'Train Tickets'),
+	(2, 4, 112, DATE(), 'New Car'),
+	(3, 2, 3, DATE(), 'Sweets'),
+	(4, 3, 12, DATE(), 'New T-Shirt'),
+	(5, 1, 89, DATE(), 'New Coat'),
+	(3, 5, 56, DATE(), 'Cinema Tickets'),
+	(4, 3, 70, DATE(), 'House'),
 	(4, 2, 20, DATE(), 'Snack');
 
 
