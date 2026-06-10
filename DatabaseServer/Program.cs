@@ -76,11 +76,15 @@ while (running)
             SqliteCommand transactions = c.CreateCommand();
             transactions.CommandText = sql;
             SqliteDataReader rTransactions = transactions.ExecuteReader();
+            Console.WriteLine($"Payments received:");
             while(rTransactions.Read())
             {
                 int PaymentID = rTransactions.GetInt32(0);
                 int GiverID = rTransactions.GetInt32(1);
                 int RecipientID = rTransactions.GetInt32(2);
+                int Amount = rTransactions.GetInt32(3);
+                string Description = rTransactions.GetString(4);
+                Console.WriteLine($"{PaymentID,5}|{GiverID,5}|{RecipientID,5}|£{Amount,5}|{Description,5}");
 
             }
             // get list of money given
