@@ -69,6 +69,8 @@ while (running)
             string password = r.GetString(4);
             int jobID = r.GetInt32(5);
 
+            int balance = 0;
+
             Console.WriteLine($"{id,5}|{firstname,15}|{lastname,15}|{username,15}:{password,15}");
 
             // get list of money received
@@ -83,13 +85,29 @@ while (running)
                 int GiverID = rTransactions.GetInt32(1);
                 int RecipientID = rTransactions.GetInt32(2);
                 int Amount = rTransactions.GetInt32(3);
+                balance += Amount;
                 string Description = rTransactions.GetString(4);
                 Console.WriteLine($"{PaymentID,5}|{GiverID,5}|{RecipientID,5}|£{Amount,5}|{Description,5}");
 
             }
-            // get list of money given
-            //sql = $"SELECT * FROM Payment WHERE GiverID={id}";*/
 
+            sql = $"SELECT * FROM Payment WHERE RecipientID={id}";
+            transactions = c.CreateCommand();
+            transactions.CommandText = sql;
+            rTransactions = transactions.ExecuteReader();
+            Console.WriteLine($"Payments sent:");
+            while (rTransactions.Read())
+            {
+                int PaymentID = rTransactions.GetInt32(0);
+                int GiverID = rTransactions.GetInt32(1);
+                int RecipientID = rTransactions.GetInt32(2);
+                int Amount = rTransactions.GetInt32(3);
+                balance -= Amount;
+                string Description = rTransactions.GetString(4);
+                Console.WriteLine($"{PaymentID,5}|{GiverID,5}|{RecipientID,5}|-£{Amount,5}|{Description,5}");
+            }
+
+            Console.WriteLine($"Total balance: £{balance}");
 
         } else
         {
