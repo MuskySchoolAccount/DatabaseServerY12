@@ -91,7 +91,8 @@ while (running)
 
             }
 
-            sql = $"SELECT * FROM Payment WHERE RecipientID={id}";
+            // get list of money sent 
+            sql = $"SELECT * FROM Payment WHERE GiverID={id}";
             transactions = c.CreateCommand();
             transactions.CommandText = sql;
             rTransactions = transactions.ExecuteReader();
