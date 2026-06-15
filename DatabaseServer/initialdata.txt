@@ -16,7 +16,7 @@ INSERT INTO Person
         ('Zulkifl', 'Khan', 'khanz', 'kiwi8', 3),
         ('Matthew', 'Musk', 'muskm', 'apple1', 1),
         ('The', 'Bank', 'banker', 'secret', 4),
-        ('Xander', 'Stiles', 'stilesa', 'woahSecret' 3)
+        ('Xander', 'Stiles', 'stilesa', 'woahSecret', 3),
         ('Peter', 'Dring', 'dringp', 'a13computer', 1);
 
 CREATE TABLE Payment (
