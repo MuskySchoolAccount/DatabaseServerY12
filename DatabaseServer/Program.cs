@@ -92,7 +92,7 @@ while (running)
                 string Description = rTransactions.GetString(5);
                 string FirstName = rTransactions.GetString(6);
                 string LastName = rTransactions.GetString(7);
-                balance -= Amount;
+                balance += Amount;
 
                 Console.WriteLine($"{PaymentID,3}| Sent £{Amount} to ({RecipientID}) {FirstName} {LastName} for {Description}, date: {Date}");
 
@@ -117,7 +117,7 @@ while (running)
                 string Description = rTransactions.GetString(5);
                 string FirstName = rTransactions.GetString(6);
                 string LastName = rTransactions.GetString(7);
-                balance += Amount;
+                balance -= Amount;
                 Console.WriteLine($"{PaymentID,3}| Recieved £{Amount} from ({GiverID}) {FirstName} {LastName} for {Description}, date: {Date}");
 
             }

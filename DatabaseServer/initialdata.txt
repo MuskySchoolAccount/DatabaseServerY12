@@ -42,7 +42,22 @@ INSERT INTO Payment(GiverID, RecipientID, Amount, TIMESTAMP, Description)
 	(5, 1, 89, DATE(), 'New Coat'),
 	(3, 5, 56, DATE(), 'Cinema Tickets'),
 	(4, 3, 70, DATE(), 'House'),
-	(4, 2, 20, DATE(), 'Snack');
+	(4, 2, 20, DATE(), 'Snack'),
+    (1, 4, 20, DATE(), 'Donuts'),
+    (2, 1, 11, DATE(), 'Crisps'),
+    (3, 6, 43, DATE(), 'Rent'),
+    (6, 4, 354, DATE(), 'Loan'),
+    (4, 3, 45, DATE(), 'New Shoes'),
+	(3, 1, 2, DATE(), 'Iron Bru'),
+	(2, 3, 87, DATE(), 'Speeding fine'),
+	(5, 6, 2, DATE(), 'New charging Cable'),
+	(3, 4, 8, DATE(), 'Socks'),
+	(3, 2, 22, DATE(), 'Birthday Gift'),
+	(1, 4, 13, DATE(), 'Waffles'),
+    (2, 5, 35, DATE(), 'Fedora'),
+    (2, 5, 45, DATE(), 'Meal Out'),
+    (3, 1, 4, DATE(), 'Photobooth'),
+    (6, 2, 400, DATE(), 'Mortgage');
 
 
 CREATE TABLE Job (
